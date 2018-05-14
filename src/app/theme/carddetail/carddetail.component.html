@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 title-success">
+      <h5 class="text-success">Giao dịch thành công</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6" *ngFor="let row of rowsBasic">
+      <div class="card bg-light">
+        <div class="card-body">
+          <div class="row alert">
+            <div class="logo-card col-5">
+              <img alt="Mã thẻ Viettel" src="assets/images/viettel.png">
+            </div>
+            <div class="col-7">
+              <label class="card-txtNoti">Trạng thái: Thành công</label>
+              <label class="card-txtNoti">Thời gian: {{row.create_date | date:'dd/MM/yyyy HH:mm'}}</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row alert alert-primary">
+              <div class="col-6">Mã nạp:</div>
+              <div class="col-6">{{row.card_pin}}</div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row alert" style="margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px;">
+              <div class="col-6">
+                <label style="font-size: 18px; color: #6c757d; font-weight: 500">{{row.amount | number}} vnđ</label>
+              </div>
+              <div class="col-6">
+                <span class="card-txtNoti">Số serial: {{row.card_serial}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -60,17 +60,27 @@ export class CategoryService {
     });
   }
 
-  getAll() {
+  getAll(productId, quantity) {
+    let param = '';
+
+    // if (filter) {
+    //   param = Object.entries(filter).map(([key, val]) => `${key}=${val}`).join('&');
+    //   console.log('filter', param);
+    // }
+
+    if (quantity) {
+      param += '?query=[{"productId": '+ JSON.stringify(productId) + ', "quantity": '+ JSON.stringify(quantity) + '}]';
+    }
     return this.apiService
-    .get('/post-category')
-    .map(data => {
-      return data;
-    });
+      .get('/payment/get-card-partner/' + param)
+      .map(data => {
+        return data;
+      });
   }
 
-  get(categoryId: string) {
+  get(Param: any) {
     return this.apiService
-    .get('/post-category/' + categoryId)
+    .get('/payment/get-card-partner/?query=[{"productId": 1,%20"quantity": 1}]')
     .map(data => {
       return data;
     });

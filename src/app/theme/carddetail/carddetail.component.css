@@ -1,0 +1,17 @@
+.logo-card {
+    width: 100px;
+    height: 50px;
+}
+.logo-card img {
+    width: 100%;
+}
+.title-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.card-txtNoti {
+    font-size: 14px;
+}

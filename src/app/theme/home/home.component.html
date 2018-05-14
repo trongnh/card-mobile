@@ -1,153 +1,146 @@
-<div class="cpmtainer-full">
-  <div class="ev-banner-img load-default-image img-wrap" style="background-color: #f26122">
-    <img class="banner-desktop" src="assets/images/slideshow_1.png" />
-  </div>
-  <div class="container">
-    <div class="main-napthe">
-      <div class="row">
-        <div class="col-7">
-          <div class="card">
-            <div class="card-body">
-              <div>
-                <h2>Chọn nhà mạng</h2>
-              </div>
-              <div class="row phoneCharge-b">
-                <div class="col">
-                  <span class="phoneCharge-choose">
-                    <input id="rad-id-network-viettel" (change)="onChange($event)" name="networkprovider" type="radio" value="1">
-                    <label for="rad-id-network-viettel">
-                      <span class="item-badge item-badge--5">
-                        <span class="item-badge-content">-5%</span>
-                      </span>
-                      <img src="assets/images/viettel.png"
-                      />
-                    </label>
+<div class="ev-banner-img load-default-image img-wrap" style="background-color: #f26122">
+  <img class="banner-desktop card-img-top" src="assets/images/slideshow_1.png" />
+</div>
+<div class="container main-napthe">
+  <div class="row">
+    <div class="col-7">
+      <div class="card">
+        <div class="card-body">
+          <div>
+            <h2>Chọn nhà mạng</h2>
+          </div>
+          <div class="row phoneCharge-b">
+            <div class="col-4">
+              <span class="phoneCharge-choose">
+                <input id="rad-id-network-viettel" (change)="onChangeCard($event)" name="networkprovider" type="radio" value="viettel">
+                <label for="rad-id-network-viettel">
+                  <span class="item-badge item-badge--5">
+                    <span class="item-badge-content">-5%</span>
                   </span>
-                </div>
-                <div class="col">
-                  <span class="phoneCharge-choose">
-                    <input id="rad-id-network-mobile" (change)="onChange($event)" name="networkprovider" type="radio" value="2">
-                    <label for="rad-id-network-mobile">
-                      <img src="assets/images/mobile.png"
-                      />
-                    </label>
-                  </span>
-                </div>
-                <div class="col">
-                  <span class="phoneCharge-choose">
-                    <input id="rad-id-network-vina" (change)="onChange($event)" name="networkprovider" type="radio" value="3">
-                    <label for="rad-id-network-vina">
-                      <img src="assets/images/vinaphone.png"
-                      />
-                    </label>
-                  </span>
-                </div>
-                <div class="col">
-                  <span class="phoneCharge-choose">
-                    <input id="rad-id-network-vietnammobile" (change)="onChange($event)" name="networkprovider" type="radio" value="4">
-                    <label for="rad-id-network-vietnammobile">
-                      <img src="assets/images/vietnammobile.png"
-                      />
-                    </label>
-                  </span>
-                </div>
-                <div class="col">
-                  <span class="phoneCharge-choose">
-                    <input id="rad-id-network-gmobile" (change)="onChange($event)" name="networkprovider" type="radio" value="5">
-                    <label for="rad-id-network-gmobile">
-                      <img src="assets/images/gmobile.png"
-                      />
-                    </label>
-                  </span>
-                </div>
-              </div>
-              <div>
-                <h2>Chọn mệnh giá</h2>
-              </div>
-              <div class="row phoneCharge-b">
-                <div class="col-4 phoneCharge-choose phoneCharge-choose-value">
-                  <label>
-                    <strong>10,000đ</strong>
-                    <span class="curr">Giá 9,700đ</span>
-                  </label>
-                </div>
-                <div class="col-4 phoneCharge-choose phoneCharge-choose-value">
-                  <label>
-                    <strong>10,000đ</strong>
-                    <span class="curr">Giá 9,700đ</span>
-                  </label>
-                </div>
-                <div class="col-4 phoneCharge-choose phoneCharge-choose-value">
-                  <label>
-                    <strong>10,000đ</strong>
-                    <span class="curr">Giá 9,700đ</span>
-                  </label>
-                </div>
-                <div class="col-4 phoneCharge-choose phoneCharge-choose-value">
-                  <label>
-                    <strong>10,000đ</strong>
-                    <span class="curr">Giá 9,700đ</span>
-                  </label>
-                </div>
-              </div>
-              <div class="row phoneCharge-b">
-                <div class="col-6 card-network">
-                  <div class="phoneCharge-wrap-img">
-                    <img alt="Mã thẻ Viettel" src="assets/images/viettel.png">
-                  </div>
-                  <div class="info">
-                    <h3>Viettel</h3>
-                    <p>Mã thẻ Viettel</p>
-                  </div>
-                </div>
-                <div class="col-6 btn-quantity">
-                  <button (click)="onClickDecrease($event)" class="btn btn-defaul">-</button>
-                  <span class="btn">{{amout}}</span>
-                  <button (click)="onClickAugment($event)" class="btn btn-defaul">+</button>
-                </div>
-              </div>
-              <div class="row phoneCharge-b">
-                <div class="col-12">
-                  <h2>nhập số điện thoại</h2>
-                  <p class="desription">Để bảo mật, Senpay sẽ không gởi Tin nhắn khi mua thẻ. Hướng dẫn xem mã thẻ và số seri tại đây</p>
-                </div>
-                <div class="col-12">
-                  <div class="inputPhoneNumber-group">
-                    <input placeholder="ví dụ: 0912345678" maxlength="11" />
-                  </div>
-                </div>
-              </div>
-              <div class="sptopup-total-price">
-                <span class="total-price">Thành tiền:
-                  <strong>100,000đ</strong>
-                </span>
-                <span class="total-price">Giá dành riêng cho thành viên:
-                  <strong>97,000đ</strong>
-                </span>
-              </div>
-              <div class="sptopup-agreement">
-                <label>
-                  <input type="checkbox" />
-                  <span>Tôi đã đọc và đồng ý với
-                    <a href="#" target="_blank">Điều khoản mua dịch vụ</a>
-                  </span>
+                  <img src="assets/images/viettel.png" />
                 </label>
+              </span>
+            </div>
+            <div class="col-4">
+              <span class="phoneCharge-choose">
+                <input id="rad-id-network-mobile" (change)="onChangeCard($event)" name="networkprovider" type="radio" value="mobile">
+                <label for="rad-id-network-mobile">
+                  <img src="assets/images/mobile.png" />
+                </label>
+              </span>
+            </div>
+            <div class="col-4">
+              <span class="phoneCharge-choose">
+                <input id="rad-id-network-vina" (change)="onChangeCard($event)" name="networkprovider" type="radio" value="vinaphone">
+                <label for="rad-id-network-vina">
+                  <img src="assets/images/vinaphone.png" />
+                </label>
+              </span>
+            </div>
+            <div class="col-4">
+              <span class="phoneCharge-choose">
+                <input id="rad-id-network-vietnammobile" (change)="onChangeCard($event)" name="networkprovider" type="radio" value="vietnammobile">
+                <label for="rad-id-network-vietnammobile">
+                  <img src="assets/images/vietnammobile.png" />
+                </label>
+              </span>
+            </div>
+            <div class="col-4">
+              <span class="phoneCharge-choose">
+                <input id="rad-id-network-gmobile" (change)="onChangeCard($event)" name="networkprovider" type="radio" value="gmobile">
+                <label for="rad-id-network-gmobile">
+                  <img src="assets/images/gmobile.png" />
+                </label>
+              </span>
+            </div>
+          </div>
+          <div *ngIf='isPrice'>
+            <div>
+              <h2>Chọn mệnh giá</h2>
+            </div>
+            <div class="row phoneCharge-b">
+              <div class="col-4 phoneCharge-choose-value">
+                <span class="phoneCharge-choose">
+                  <input id="rad-id-price-10" (change)="onChangePrice($event)" name="mobicard" type="radio" value="10000">
+                  <label for="rad-id-price-10">
+                    <span class="item-badge item-badge--5">
+                      <span class="item-badge-content">-5%</span>
+                    </span>
+                    <strong>10,000đ</strong>
+                    <span class="curr">Giá 9,700đ</span>
+                  </label>
+                </span>
               </div>
-              <div class="sptopup-buynow-button">
-                <button class="btn btn-danger col-6">Nạp ngay</button>
+              <div class="col-4 phoneCharge-choose-value">
+                <span class="phoneCharge-choose">
+                  <input id="rad-id-price-20" (change)="onChangePrice($event)" name="mobicard" type="radio" value="20000">
+                  <label for="rad-id-price-20">
+                    <strong>20,000đ</strong>
+                    <span class="curr">Giá 9,700đ</span>
+                  </label>
+                </span>
+              </div>
+              <div class="col-4 phoneCharge-choose-value">
+                <span class="phoneCharge-choose">
+                  <input id="rad-id-price-50" (change)="onChangePrice($event)" name="mobicard" type="radio" value="50000">
+                  <label for="rad-id-price-50">
+                    <strong>50,000đ</strong>
+                    <span class="curr">Giá 9,700đ</span>
+                  </label>
+                </span>
               </div>
             </div>
+          </div>
+          <div *ngIf='isPriceTotal'>
+            <div class="row phoneCharge-b">
+              <div class="col-6 card-network">
+                <div class="phoneCharge-wrap-img">
+                  <img alt="Mã thẻ Viettel" src="assets/images/{{urlImage}}.png">
+                </div>
+                <div class="info">
+                  <h3>Viettel</h3>
+                  <p>Mã thẻ Viettel</p>
+                </div>
+              </div>
+              <div class="col-6 btn-quantity">
+                <button (click)="onClickDecrease()" class="btn btn-defaul">-</button>
+                <span class="btn">{{amout}}</span>
+                <button (click)="onClickAugment()" class="btn btn-defaul">+</button>
+              </div>
+            </div>
+            <div class="sptopup-total-price">
+              <span class="total-price">Thành tiền:
+                <strong>{{ToatalPrice | number}} đ</strong>
+              </span>
+              <span class="total-price">Giá dành riêng cho thành viên:
+                <strong>97,000đ</strong>
+              </span>
+            </div>
+          </div>
+          <div *ngIf="isError" class="alert alert-danger" style="margin-top: 10px;">
+            {{isError}}
+          </div>
+          <div class="sptopup-agreement">
+            <label>
+              <input (change)="onChangeRules($event.target.checked)" type="checkbox" />
+              <span>Tôi đã đọc và đồng ý với
+                <a href="#" target="_blank" routerLink="/term">Điều khoản mua dịch vụ</a>
+              </span>
+            </label>
+          </div>
+          <div class="sptopup-buynow-button">
+            <button (click)="onSubmit()" class="btn btn-danger col-6" [ngClass]="{disabled: !disabled}">Mua ngay</button>
           </div>
         </div>
-        <div class="col-5">
-          <div class="card">
-            <div class="card-header">
-              <h3>KHUYẾN MÃI HOT</h3>
-            </div>
-            <div class="card-body">
-              
-            </div>
-          </div>
+      </div>
+    </div>
+    <div class="col-5">
+      <div class="card">
+        <div class="card-header">
+          <h3>KHUYẾN MÃI HOT</h3>
+        </div>
+        <div class="card-body">
+
         </div>
       </div>
     </div>

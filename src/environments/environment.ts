@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  api_url: 'http://123.30.128.158:3200/v1',
+  api_url: 'http://123.30.128.158:3400/v1',
   api_version: 'v1'
 };
